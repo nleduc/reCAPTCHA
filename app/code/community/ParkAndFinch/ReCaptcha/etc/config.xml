@@ -1,0 +1,69 @@
+<?xml version="1.0"?>
+<!--
+/**
+* @category  ParkAndFinch
+* @package   ParkAndFinch_ReCaptcha
+* @author    Nicholas Leduc <nicholas@parkandfinch.com>
+* @copyright 2019 Park and Finch
+* @license   https://opensource.org/licenses/osl-3.0.php  Open Software License (OSL 3.0)
+* @link      https://www.parkandfinch.com/
+*/
+-->
+<config>
+    <modules>
+        <ParkAndFinch_ReCaptcha>
+            <version>1.0</version>
+        </ParkAndFinch_ReCaptcha>
+    </modules>
+    <global>
+        <helpers>
+            <recaptcha>
+                <class>ParkAndFinch_Recaptcha_Helper</class>
+            </recaptcha>
+        </helpers>
+        <blocks>
+            <parkandfinch_recaptcha>
+                <class>ParkAndFinch_Recaptcha_Block</class>
+            </parkandfinch_recaptcha>
+        </blocks>
+    </global>
+    <frontend>
+        <routers>
+            <recaptcha>
+                <use>standard</use>
+                <args>
+                    <module>ParkAndFinch_ReCaptcha</module>
+                    <frontName>recaptcha</frontName>
+                </args>
+            </recaptcha>
+        </routers>
+        <layout>
+            <updates>
+                <ParkAndFinch_ReCaptcha>
+                    <file>ParkAndFinch/recaptcha.xml</file>
+                </ParkAndFinch_ReCaptcha>
+            </updates>
+        </layout>
+    </frontend>
+    <adminhtml>
+        <acl>
+            <resources>
+                <admin>
+                    <children>
+                        <system>
+                            <children>
+                                <config>
+                                    <children>
+                                        <recaptcha_options>
+                                            <title>ParkAndFinch reCAPTCHA Module Section</title>
+                                        </recaptcha_options>
+                                    </children>
+                                </config>
+                            </children>
+                        </system>
+                    </children>
+                </admin>
+            </resources>
+        </acl>
+    </adminhtml>
+</config>

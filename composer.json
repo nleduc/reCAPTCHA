@@ -1,0 +1,12 @@
+{
+    "name": "parkandfinch/recaptcha",
+    "type": "magento-module",
+    "license": "OSL-3.0",
+    "description": "Easy-to-use Google v2 Invisible reCATPCHA implementation for protecting any form for Magento 1.9 projects",
+    "authors": [
+        {
+            "name": "Nicholas Leduc",
+            "email": "nicholas@parkandfinch.com"
+        }
+    ]
+}

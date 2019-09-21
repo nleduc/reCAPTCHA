@@ -1,0 +1,21 @@
+<?xml version="1.0"?>
+<!--
+/**
+* @category  ParkAndFinch
+* @package   ParkAndFinch_ReCaptcha
+* @author    Nicholas Leduc <nicholas@parkandfinch.com>
+* @copyright 2019 Park and Finch
+* @license   https://opensource.org/licenses/osl-3.0.php  Open Software License (OSL 3.0)
+* @link      https://www.parkandfinch.com/
+*/
+-->
+<layout version="0.1.0">
+    <default>
+        <reference name="head">
+            <block type="parkandfinch_recaptcha/recaptcha" name="recaptcha.header" template="parkandfinch/recaptcha/header.phtml" />
+            <action method="addCss" ifconfig="recaptcha_options/settings/hide_badge">
+                <file>css/parkandfinch/recaptcha/recaptcha.css</file>
+            </action>
+        </reference>
+    </default>
+</layout>

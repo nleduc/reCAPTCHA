@@ -1,0 +1,56 @@
+<?php
+/**
+ * @category  ParkAndFinch
+ * @package   ParkAndFinch_ReCaptcha
+ * @author    Nicholas Leduc <nicholas@parkandfinch.com>
+ * @copyright 2019 Park and Finch
+ * @license   https://opensource.org/licenses/osl-3.0.php  Open Software License (OSL 3.0)
+ * @link      https://www.parkandfinch.com/
+ */
+?>
+
+<?php
+/**
+ * @var $this ParkAndFinch_ReCaptcha_Block_Recaptcha
+ */
+?>
+
+<?php if ($this->isReCaptchaEnabled()): ?>
+<script type="text/javascript">
+    <?php
+    /**
+     * Associative array matching forms to their associated reCATPCHA widgetID
+     */
+    ?>
+    var formWidgetIds = [];
+
+    <?php
+    /**
+     * Executed once all the reCAPTCHA dependencies have loaded
+     */
+    ?>
+    var pfOnloadReCaptchaCallback = function() {
+        var recaptchaContainers = document.querySelectorAll(".<?php echo $this->getReCaptchaClass(); ?>"), i;
+
+        for (i = 0; i < recaptchaContainers.length; ++i) {
+            var containingFormElement = recaptchaContainers[i].closest('form');
+            var widgetId = grecaptcha.render(recaptchaContainers[i], {
+                'sitekey': '<?php echo $this->getSiteKey(); ?>',
+                'callback': function(token) {
+                    containingFormElement.submit();
+                },
+                'size': 'invisible'
+            });
+
+            formWidgetIds[containingFormElement] = widgetId;
+
+            containingFormElement.onsubmit = function(event) {
+                event.preventDefault();
+                grecaptcha.reset(formWidgetIds[this]);
+                grecaptcha.execute(formWidgetIds[this]);
+            }
+        }
+    }
+</script>
+<script src="https://www.google.com/recaptcha/api.js?onload=pfOnloadReCaptchaCallback&render=explicit" async defer></script>
+<?php endif; ?>
