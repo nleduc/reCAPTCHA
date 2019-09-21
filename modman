@@ -1,0 +1,11 @@
+# app/code
+app/code/community/ParkAndFinch/ReCaptcha            app/code/community/ParkAndFinch/ReCaptcha
+# app/etc
+app/etc/modules/ParkAndFinch_ReCaptcha.xml            app/etc/modules/ParkAndFinch_ReCaptcha.xml
+# app/design
+app/design/frontend/base/default/layout/ParkAndFinch/recaptcha.xml            app/design/frontend/base/default/layout/ParkAndFinch/recaptcha.xml
+app/design/frontend/base/default/template/parkandfinch/recaptcha/branding.phtml            app/design/frontend/base/default/template/parkandfinch/recaptcha/branding.phtml
+app/design/frontend/base/default/template/parkandfinch/recaptcha/header.phtml            app/design/frontend/base/default/template/parkandfinch/recaptcha/header.phtml
+app/design/frontend/base/default/template/parkandfinch/recaptcha/recaptcha.phtml            app/design/frontend/base/default/template/parkandfinch/recaptcha/recaptcha.phtml
+# skin
+skin/frontend/base/default/css/parkandfinch/recaptcha/recaptcha.css            skin/frontend/base/default/css/parkandfinch/recaptcha/recaptcha.css
