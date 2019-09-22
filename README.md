@@ -184,4 +184,4 @@ class ParkAndFinch_AjaxNewsletterSignup_Model_Observer
 
 ## Authors
 
-**Nicholas Leduc** - Owner of [Park and Finch Eyewear](https://www.parkandfinch.com/)
+**[Nicholas Leduc](https://github.com/nleduc)** - Owner of [Park and Finch Eyewear](https://www.parkandfinch.com/)
