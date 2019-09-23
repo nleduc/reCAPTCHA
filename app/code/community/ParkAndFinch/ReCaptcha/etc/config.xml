@@ -12,13 +12,13 @@
 <config>
     <modules>
         <ParkAndFinch_ReCaptcha>
-            <version>1.0</version>
+            <version>1.0.4</version>
         </ParkAndFinch_ReCaptcha>
     </modules>
     <global>
         <helpers>
             <recaptcha>
-                <class>ParkAndFinch_Recaptcha_Helper</class>
+                <class>ParkAndFinch_ReCaptcha_Helper</class>
             </recaptcha>
         </helpers>
         <blocks>
