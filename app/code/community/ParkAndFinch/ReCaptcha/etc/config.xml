@@ -12,7 +12,7 @@
 <config>
     <modules>
         <ParkAndFinch_ReCaptcha>
-            <version>1.0.4</version>
+            <version>1.0.5</version>
         </ParkAndFinch_ReCaptcha>
     </modules>
     <global>
@@ -23,7 +23,7 @@
         </helpers>
         <blocks>
             <parkandfinch_recaptcha>
-                <class>ParkAndFinch_Recaptcha_Block</class>
+                <class>ParkAndFinch_ReCaptcha_Block</class>
             </parkandfinch_recaptcha>
         </blocks>
     </global>
