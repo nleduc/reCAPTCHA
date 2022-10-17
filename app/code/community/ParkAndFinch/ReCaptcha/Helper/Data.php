@@ -3,7 +3,7 @@
  * @category  ParkAndFinch
  * @package   ParkAndFinch_ReCaptcha
  * @author    Nicholas Leduc <nicholas@parkandfinch.com>
- * @copyright 2019 Park and Finch
+ * @copyright 2022 Park and Finch
  * @license   https://opensource.org/licenses/osl-3.0.php  Open Software License (OSL 3.0)
  * @link      https://www.parkandfinch.com/
  */
@@ -21,7 +21,7 @@ class ParkAndFinch_Recaptcha_Helper_Data extends Mage_Core_Helper_Abstract
 
     const RECAPTCHA_POST_PARAM = 'g-recaptcha-response';
     const RECAPTCHA_CLASS = 'g-recaptcha';
-    const RECAPTCHA_VERIFCATION_URL = 'https://www.google.com/recaptcha/api/siteverify';
+    const RECAPTCHA_VERIFICATION_URL = 'https://www.google.com/recaptcha/api/siteverify';
 
     /**
      * Returns whether reCAPTCHA is enabled or not
@@ -68,7 +68,7 @@ class ParkAndFinch_Recaptcha_Helper_Data extends Mage_Core_Helper_Abstract
 
         try {
             $curlHandler = curl_init();
-            curl_setopt($curlHandler, CURLOPT_URL, self::RECAPTCHA_VERIFCATION_URL);
+            curl_setopt($curlHandler, CURLOPT_URL, self::RECAPTCHA_VERIFICATION_URL);
             curl_setopt($curlHandler, CURLOPT_RETURNTRANSFER, 1);
             curl_setopt($curlHandler, CURLOPT_POST, 1);
             curl_setopt($curlHandler, CURLOPT_POSTFIELDS, $postFields);
